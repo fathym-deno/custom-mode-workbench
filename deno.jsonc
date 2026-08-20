@@ -1,0 +1,24 @@
+{
+  "name": "custom-mode-workbench",
+  "version": "0.0.1",
+  "exports": {
+    ".": "./workbenches/cron/local.ts"
+  },
+  "tasks": {
+    "cron": "fai run workbenches/cron/local.ts --mode Cron"
+  },
+  "imports": {
+    // NOTE: 0.0.406 does NOT yet include `DefineModeHolon` (Phase 11 D.11.3)
+    // or the `ref-arch` `EaCModeHolon` type (Phase 11 D.11.1). Both ship on
+    // `fathym-deno/power-ai` + `open-industrial-reference-architecture`
+    // branch `feature/track-6-phases-9-10-11`; JSR publish is pending as
+    // part of the Phase 9+10+11 cascade release. This pin is kept at
+    // 0.0.406 so `deno.jsonc` stays syntactically valid; imports in
+    // workbenches/cron/mode-holon.ts will fail until the bump.
+    "@fathym/fai/workbenches": "jsr:@fathym/fai@0.0.406/workbenches",
+    "zod": "npm:zod@4.1.13"
+  },
+  "compilerOptions": {
+    "strict": true
+  }
+}
