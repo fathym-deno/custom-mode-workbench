@@ -15,7 +15,7 @@
     // part of the Phase 9+10+11 cascade release. This pin is kept at
     // 0.0.406 so `deno.jsonc` stays syntactically valid; imports in
     // workbenches/cron/mode-holon.ts will fail until the bump.
-    "@fathym/fai/workbenches": "jsr:@fathym/fai@0.0.406/workbenches",
+    "@fathym/fai/workbenches": "jsr:@fathym/fai@0.0.785/workbenches",
     "zod": "npm:zod@4.1.13"
   },
   "compilerOptions": {
