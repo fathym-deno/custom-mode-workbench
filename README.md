@@ -2,7 +2,7 @@
 
 Track 6 Phase 11 sample workbench demonstrating a **custom mode type** authored with `DefineModeHolon`.
 
-Sibling to [`api-workbench`](https://github.com/fathym-deno/api-workbench) (Phase 9 API-mode sample), [`ui-workbench`](https://github.com/fathym-deno/ui-workbench) (Phase 10 WebMode + Consumes sample), and [`hello-workbench`](https://github.com/fathym-deno/hello-workbench) (v1 MCP-mode reference).
+Sibling to [`api-workbench`](https://github.com/fathym/api-workbench) (Phase 9 API-mode sample), [`ui-workbench`](https://github.com/fathym/ui-workbench) (Phase 10 WebMode + Consumes sample), and [`hello-workbench`](https://github.com/fathym-deno/hello-workbench) (v1 MCP-mode reference).
 
 ## What it demonstrates
 
@@ -34,7 +34,7 @@ A real Cron mode would parse cron expressions (or use `Deno.cron`), support mult
 **One-time workspace admin step: register the mode holon.**
 
 ```typescript
-import { CronModeHolon } from 'https://raw.githubusercontent.com/fathym-deno/custom-mode-workbench/main/workbenches/cron/mode-holon.ts';
+import { CronModeHolon } from 'https://raw.githubusercontent.com/fathym/custom-mode-workbench/main/workbenches/cron/mode-holon.ts';
 
 eac.ModeHolons ??= {};
 eac.ModeHolons['Cron'] = CronModeHolon.Binding;
@@ -44,7 +44,7 @@ eac.ModeHolons['Cron'] = CronModeHolon.Binding;
 **Then deploy the workbench:**
 
 1. Drop a **SurfaceWorkbench** onto a surface. In the inspector:
-   - **Source** tab: Repo `https://github.com/fathym-deno/custom-mode-workbench`, Ref `main`, Entry `workbenches/cron/local.ts`
+   - **Source** tab: Repo `https://github.com/fathym/custom-mode-workbench`, Ref `main`, Entry `workbenches/cron/local.ts`
    - **Hosting** tab: APISlug `cron-sample`
    - **Modes** tab (after first deploy): enable `Cron`
 2. Deploy. Once `HostingStatus` is `Running`, tail the Container App logs:
@@ -78,8 +78,8 @@ Runs the Cron mode against a local `Deno.serve` on port 4970. `Ctrl+C` to stop.
 
 - **Track 6 v2 execution tracker**: [`o-industrial/oi-core-pack#61`](https://github.com/o-industrial/oi-core-pack/issues/61)
 - **Phase 11 spec** (on `fathym-dev-space`): [`.workbench/.workstreams/2026-04-06-NewNodeCapabilities/track-6-workbench-node/phase-11-custom-mode-types.md`](https://github.com/fathym-deno/fathym-dev-space/blob/feature/track-6-phases-9-10-11/.workbench/.workstreams/2026-04-06-NewNodeCapabilities/track-6-workbench-node/phase-11-custom-mode-types.md)
-- **Phase 9 API-mode sample**: [`fathym-deno/api-workbench`](https://github.com/fathym-deno/api-workbench)
-- **Phase 10 WebMode sample**: [`fathym-deno/ui-workbench`](https://github.com/fathym-deno/ui-workbench)
+- **Phase 9 API-mode sample**: [`fathym/api-workbench`](https://github.com/fathym/api-workbench)
+- **Phase 10 WebMode sample**: [`fathym/ui-workbench`](https://github.com/fathym/ui-workbench)
 - **v1 MCP-mode reference sample**: [`fathym-deno/hello-workbench`](https://github.com/fathym-deno/hello-workbench)
 
 ## License
